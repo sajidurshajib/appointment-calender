@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Appointment Calender</title>
+</head>
+<body>
+    <div class="container">
+        <!-- calender section -->
+        <div class="calender">
+            <!-- nav section -->
+            <div class="nav">
+                <select name="" id="month">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <button id="create">Create Appointment</button>
+                
+                <!-- modal -->
+                <div class="modal-bg">
+                    <form action="">
+                        <div class="modal">
+                            <span id="close-modal">x</span>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" maxlength="40" required>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" maxlength="40" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                        <label for="gender">Gender:</label>
+                        <select name="" id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <label for="age">Age:</label>
+                        <input type="number" name="" id="age" min="1" required>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" required>
+                        <label for="time">Time</label>
+                        <input type="time" id="time" required>
+                        <button id="submit">Submit</button>
+                    </div>
+                </form>
+                </div>
+                
+            </div>
+            <div class="days">
+                <span>Sun</span>
+                <span>Mon</span>
+                <span>Tue</span>
+                <span>Wed</span>
+                <span>Thu</span>
+                <span>Fri</span>
+                <span>Sat</span>
+            </div>
+            <div class="dates">
+                <!-- all dates here -->
+            </div>
+
+            <div class="user-modal"></div>
+        </div>
+    </div>
+    <script src="./script.js" ></script>
+</body>
+</html>
