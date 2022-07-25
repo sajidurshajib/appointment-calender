@@ -8,12 +8,18 @@ let renderCalender = () => {
         localStorage.setItem('data', JSON.stringify([]));
     }
     let allData = JSON.parse(localStorage.getItem('data'));
-    console.log(allData);
 
     // first empty date
     let firstEmptyDate = date.getDay();
-    if (firstEmptyDate === 0) {
-        firstEmptyDate = 7;
+    // if (firstEmptyDate === 0) {
+    //     firstEmptyDate = 6;
+    // }
+    firstEmptyDate += 5;
+    if (firstEmptyDate > 6) {
+        firstEmptyDate -= 7;
+    }
+    if (firstEmptyDate == 0) {
+        firstEmptyDate += 7;
     }
 
     // last day
@@ -41,7 +47,6 @@ let renderCalender = () => {
                                     (v.date.split('-').slice(2, 3) == i) &
                                     (v.date.split('-').slice(1, 2) == date.getMonth() + 1)
                                 ) {
-                                    console.log(i);
                                     return `<span class="every-user" data-firstName="${v.firstName}" data-lastName="${v.lastName}" data-email="${v.email}" data-gender="${v.gender}" data-age="${v.age}" data-date="${v.date}" data-time="${v.time}" onclick="dataattr(this)">${v.firstName} ${v.lastName}</span>`;
                                 }
                                 return;
